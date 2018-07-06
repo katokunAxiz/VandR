@@ -88,7 +88,7 @@
 			<div class="row">
 				<div class="col">
 					<label class="mr-sm-2" for="inlineFormCustomSelect">電話番号</label> <input
-						class="form-control" type="text" placeholder="000-0000-0000">
+						class="form-control" type="text" placeholder="00012345678">
 				</div>
 			</div>
 			<br>
@@ -107,7 +107,15 @@
 					<input class="form-control" type="text" placeholder="2名">
 				</div>
 			</div>
-			<br> <br>
+			<br>
+
+			<div class="row">
+				<div class="col">
+					<label class="mr-sm-2" for="inlineFormCustomSelect">席種別</label>
+					<input class="form-control" type="text" placeholder="2人掛けテーブル">
+				</div>
+			</div>
+			<br><br>
 
 			<p style="color: #ff0000">一度取り消した予約は元に戻せません。</p>
 			<div class="row">
@@ -119,7 +127,7 @@
 			<div class="row">
 				<div class="col">
 					<button class="btn btn-outline-secondary btn-sm" type="button"
-						onclick="location.href='Tanae-TOP'">キャンセルせずトップへ</button>
+						onclick="location.href='userMypage_saito'">マイページに戻る</button>
 				</div>
 			</div>
 		</form>

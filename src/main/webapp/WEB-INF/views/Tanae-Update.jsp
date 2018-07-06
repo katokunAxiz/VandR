@@ -10,7 +10,7 @@
 <meta name="author" content="">
 <link rel="icon" href="/css/favicon.ico">
 
-<title>会員情報更新画面</title>
+<title>会員情報更新</title>
 
 <!-- Bootstrap core CSS -->
 <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -35,99 +35,106 @@
 
 			<div class="collapse navbar-collapse" id="navbarsExample01">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a class="nav-link" href="tanae-TOP">トップ</a>
+					<li class="nav-item"><a class="nav-link" href="Tanae-TOP">トップ</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="login">ログイン</a>
 					</li>
 					<li class="nav-item"><a class="nav-link"
 						href="userMypage_saito">マイページ</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="userReservationLook_saito">予約確認</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 
 	<script src="/js/jquery-slim.min.js"></script>
-	<script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
+	<script>
+		window.jQuery
+				|| document.write(
+						'<script src="js/jquery-slim.min.js"><\/script>')
+	</script>
 	<script src="/js/popper.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 
-<br>
-<br>
-<br>
+	<br>
+	<br>
+	<br>
 
-<div class="container">
-	<form class="form-signin">
+	<div class="container">
+		<form class="form-signin">
 
-		<p>更新する情報を入れてください。<br>
-		会員IDは変更できません。</p>
+			<p>
+				更新する情報を入れてください。<br> 会員IDは変更できません。
+			</p>
 
-		<div class="row">
-		<div class="col">
-		<input class="form-control" type="text" placeholder="姓">
-		</div>
-		<div class="col">
-		<input class="form-control" type="text" placeholder="名">
-		</div>
-		</div>
-		<br>
+			<div class="row">
+				<div class="col">
+					<input class="form-control" type="text" placeholder="姓">
+				</div>
+				<div class="col">
+					<input class="form-control" type="text" placeholder="名">
+				</div>
+			</div>
+			<br>
 
-		<div class="row">
-		<div class="col">
-		<input class="form-control" type="text" placeholder="電話番号（ハイフンなし）">
-		</div>
-		</div>
-		<br>
+			<div class="row">
+				<div class="col">
+					<input class="form-control" type="text" placeholder="電話番号（ハイフンなし）">
+				</div>
+			</div>
+			<br>
 
-		<div class="row">
-		<div class="col">
-		<input class="form-control" type="password" placeholder="パスワード">
-		</div>
-		</div>
+			<div class="row">
+				<div class="col">
+					<input class="form-control" type="password" placeholder="パスワード">
+				</div>
+			</div>
 
-		<div class="row">
-		<div class="col">
-		<input class="form-control" type="password" placeholder="パスワード（確認のため再入力）">
-		</div>
-		</div>
-		<br>
+			<div class="row">
+				<div class="col">
+					<input class="form-control" type="password"
+						placeholder="パスワード（確認のため再入力）">
+				</div>
+			</div>
+			<br>
 
 
-		<!-- 切り替えボタンの設定 -->
-		<button type="button" class="btn btn-lg btn-warning btn-primary btn-block"
-			data-toggle="modal" data-target="#exampleModalCenter">更新する</button>
+			<!-- 切り替えボタンの設定 -->
+			<button type="button"
+				class="btn btn-lg btn-warning btn-primary btn-block"
+				data-toggle="modal" data-target="#exampleModalCenter">更新する</button>
 
-		<!-- モーダルの設定 -->
-		<div class="modal fade" id="exampleModalCenter" tabindex="-1"
-			role="dialog" aria-labelledby="exampleModalCenterTitle"
-			aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalCenterTitle">会員情報の更新</h5>
-						<button type="button" class="close" data-dismiss="modal"
-							aria-label="閉じる">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<p>入力した内容で更新してよろしいですか？</p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary"
-							data-dismiss="modal">閉じる</button>
-						<button type="button" class="btn btn-warning"
-							onclick="location.href='Tanae-UpdateResult'">更新する</button>
+			<!-- モーダルの設定 -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1"
+				role="dialog" aria-labelledby="exampleModalCenterTitle"
+				aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalCenterTitle">更新確認</h5>
+							<button type="button" class="close" data-dismiss="modal"
+								aria-label="閉じる">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<p>入力した内容で更新してよろしいですか？</p>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">閉じる</button>
+							<button type="button" class="btn btn-warning"
+								onclick="location.href='Tanae-UpdateResult'">更新する</button>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		<br>
-		<button class="btn  btn-outline-secondary" type="submit"
-			onclick="location.href='Tanae-TOP'">TOP</button>
-		<br>
+			<br>
+			<button class="btn  btn-outline-secondary" type="submit"
+				onclick="location.href='Tanae-TOP'">トップ</button>
+			<br>
 
-	</form>
+		</form>
 	</div>
 	<footer class="container">
 		<p class="float-right"></p>

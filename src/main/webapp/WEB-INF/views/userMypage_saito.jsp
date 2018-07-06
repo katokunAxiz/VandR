@@ -56,7 +56,7 @@
 	<br>
 	<br>
 	<br>
-	<h1>${fn:escapeXml(user.adminName)}山田さんのマイページ</h1>
+	<h1>${fn:escapeXml(user.userLastname)}山田さんのマイページ</h1>
 
 	<br>
 	<form:form action="userComingHistory_saito" method="post">

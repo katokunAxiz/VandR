@@ -78,7 +78,7 @@
 						<div class="card-body">
 							<h4 class="card-title">割烹 東京</h4>
 							<p class="card-text">八重洲エリア</p>
-							<p class="card-text">予算 \\2,000～\\3,000</p>
+							<p class="card-text">予算 ～\\2,999</p>
 							<p class="card-text">TEL 00-0000-0000</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
@@ -129,7 +129,7 @@
 						<div class="card-body">
 							<h4 class="card-title">中華 ○△楼</h4>
 							<p class="card-text">神田エリア</p>
-							<p class="card-text">予算 \\4,000～\\5,000</p>
+							<p class="card-text">予算 ～\\4,999</p>
 							<p class="card-text">TEL 00-0000-0000</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
@@ -149,7 +149,7 @@
 						<div class="card-body">
 							<h4 class="card-title">私のイタリアン</h4>
 							<p class="card-text">銀座エリア</p>
-							<p class="card-text">予算 \\2,000～\\3,000</p>
+							<p class="card-text">予算 ～\\2,999</p>
 							<p class="card-text">TEL 00-0000-0000</p>
 							<div class="d-flex justify-content-between align-items-center">
 								<div class="btn-group">
@@ -165,14 +165,14 @@
 		</div>
 	</div>
 	</main>
-
-	<div class="row">
-		<div class="col">
-			<button class="btn btn-outline-secondary btn-sm" type="button"
-				onclick="location.href='userMypage_saito'">マイページに戻る</button>
-		</div>
-	</div>
-	<br>
+	<form:form action="userMypage_saito" method="get">
+		<input type="submit" class="btn btn-outline-secondary"
+			value="マイページに戻る">
+	</form:form>
+<br>
+	<%-- <form:form action="userComingHistory_saito" method="get">
+		<input type="submit" class="btn btn-outline-secondary" value="来店履歴に戻る">
+	</form:form> --%>
 
 	<div>
 		<a href="Tanae-TOP">トップ</a>

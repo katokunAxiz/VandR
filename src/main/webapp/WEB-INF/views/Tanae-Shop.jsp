@@ -28,27 +28,36 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample01">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="Tanae-TOP">トップ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="userMypage_saito">マイページ</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="userReservationSelect_saito">予約確認</a>
-          </li>
-        </ul>
-      </div>
+     <div class="collapse navbar-collapse" id="navbarsExample01">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="Tanae-TOP">トップ</a>
+					</li>
+					<li class="nav-item"><a class="nav-link" href="login">ログイン</a>
+					</li>
+					<li class="nav-item"><a class="nav-link"
+						href="userMypage_saito">マイページ</a></li>
+				</ul>
+			</div>
     </nav>
+
+    <script src="/js/jquery-slim.min.js"></script>
+	<script>
+		window.jQuery
+				|| document.write(
+						'<script src="js/jquery-slim.min.js"><\/script>')
+	</script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/jQuery.js"></script>
+	<br>
+
  </header>
 
     <main role="main">
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">店舗一覧</h1>
+          <h1>店舗一覧</h1>
           <p class="lead text-muted">検索にヒットした店舗です。</p>
 
         </div>
@@ -200,6 +209,10 @@
         </div>
       </div>
 
+<br>
+<form action="Tanae-Shop" method="get">
+		<input type="submit" class="btn btn-outline-secondary" value="トップに戻る">
+	</form>
     </main>
 
      <footer class="container">

@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -36,24 +39,36 @@
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a class="nav-link" href="Tanae-TOP">トップ</a>
 					</li>
+					<li class="nav-item"><a class="nav-link" href="login">ログイン</a>
+					</li>
 					<li class="nav-item"><a class="nav-link"
 						href="userMypage_saito">マイページ</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="userReservationSelect_saito">予約確認</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
 
+	<script src="js/jquery-slim.min.js"></script>
+	<script>
+		window.jQuery
+				|| document.write(
+						'<script src="js/jquery-slim.min.js"><\/script>')
+	</script>
+	<script src="/js/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<br>
+
 	<div class="container">
-		<form action="userReservationConfirm_saito" class="form-signin">
+		<form:form action="login" class="form-signin" method="post" modelAttribute="loginForm">
 
-			<img class="mb-4"
-				src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg"
-				alt="" width="72" height="72">
 
-			<h1 class="h3 mb-3 font-weight-normal">会員ログイン</h1>
+			<h1 class="h3 mb-3 font-weight-normal">ログイン</h1>
 
+			<br>
+
+			<c:if test="${not empty errmsg}">
+				<p class="error">${fn:escapeXml(errmsg)}</p>
+			</c:if>
 
 			<div class="row">
 				<div class="col">
@@ -71,7 +86,7 @@
 
 			<div class="row">
 				<div class="col">
-					<button class="btn btn-lg btn-warning btn-block" type="submit">ログイン</button>
+					<button class="btn btn-lg btn-warning btn-block" type="submit">ログインする</button>
 				</div>
 
 			</div>
@@ -79,10 +94,10 @@
 			<div class="row">
 				<div class="col">
 					<button class="btn btn-outline-secondary btn-sm" type="button"
-						onclick="location.href='Tanae-ShopProfile'">店舗詳細に戻る</button>
+						onclick="location.href='Tanae-UserInsert'">会員登録がお済でない方はこちら</button>
 				</div>
 			</div>
-		</form>
+		</form:form>
 	</div>
 
 </body>

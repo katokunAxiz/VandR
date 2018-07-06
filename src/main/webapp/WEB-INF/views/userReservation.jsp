@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!doctype html>
 <html lang="ja">
 <head>
@@ -51,7 +55,7 @@
 <br>
 <br>
 <div class="container">
-	<form action="userReservationConfirm_saito" class="form-signin">
+	<form:form action="userReservationConfirm" class="form-signin" method="post" modelAttribute="insertReserve">
 
 		<img class="mb-4"
 			src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg"
@@ -94,7 +98,7 @@
 
 		<div class="row">
 		<div class="col">
-			<label class="mr-sm-2" for="inlineFormCustomSelect">人数</label>
+			<label class="mr-sm-2" for="inlineFormCustomSelect">来店人数</label>
 			<select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
 				<option selected>選択してください</option>
 				<option value="1">1名</option>
@@ -106,16 +110,6 @@
 	</div>
 	<br>
 
-		<!-- <div class="form-group">
-			<label for="exampleFormControlFile1">料理・</label> <input type="file"
-				class="form-control-file" id="exampleFormControlFile1">
-		</div>
-
-		<div class="form-group">
-			<label for="exampleFormControlFile1">店内・</label> <input type="file"
-				class="form-control-file" id="exampleFormControlFile1">
-		</div> -->
-		<br>
 
 		<div class="row">
 		<div class="col">
@@ -129,7 +123,7 @@
 		<button class="btn btn-outline-secondary btn-sm" type="button" onclick="location.href='Tanae-ShopProfile'">店舗詳細に戻る</button>
 		</div>
 		</div>
-	</form>
+	</form:form>
 	</div>
 
 	 <footer class="container">
